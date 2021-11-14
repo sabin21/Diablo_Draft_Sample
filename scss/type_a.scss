@@ -1,0 +1,89 @@
+
+@import "./common.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('../fonts/mark_pro/style.css');
+
+$brand-red : #b7292B;
+
+body {
+    overflow-x: hidden; font-family: 'Mark Pro Heavy', sans-serif;
+    background-color: #1D2023;
+}
+.header { 
+    position: fixed; width:100%; max-width: 1920px; height: 110px; 
+    //background-color: rgba(0,0,0,0.7);
+    z-index: 10000; color:#fff; display: flex; left:0; right: 0; margin: auto;
+    align-items: center; transition: all 0.25s;  
+    .logo { 
+        width: 73px; margin: auto $spacer-l2 auto $spacer-l3; display: block;
+        img { max-width: 100%;}
+    }
+    nav { 
+        height: 100%;
+        ul{
+            position: relative; height:100%; display: flex; align-items: center;
+            li { display: inline-block; margin-right: 2rem; }
+            a { 
+                color:#fff; font-family: "Mark Pro Bold"; font-size: 16px;
+                text-transform: uppercase; 
+            }
+        }
+    }
+    .event-menu {
+        height: 100%;
+        ul{
+            position: absolute; height:100%; display: flex; align-items: center;
+            right:50px;
+            li { display: inline-block; margin-right: 2rem; }
+            a { 
+                color:#fff; font-family: "Mark Pro Bold"; font-size: 16px;
+                text-transform: uppercase; 
+            }
+        }
+    }
+    .btn-lang {
+        position: absolute; width: 24px; height: 24px;
+        right: 30px;
+        background-image:url(../img/icon_lang.svg);
+    }
+    &.scroll {
+        height: 80px; background-color: #000;
+        .logo { width: 60px; }
+    }    
+}
+.footer {
+    width:100%; height: 320px; background-image: url(../img/a_footer.png);
+    background-size: 1920px; background-position: top center;
+}
+.hero-wrap{
+    position: relative; width: 100%; max-width: 2560px; 
+    height: 100vh; min-height: 640px;
+    overflow: hidden; margin: 0 auto;    
+    .hero-back { 
+        position: absolute; display: block; width:100%; height: 100%;
+        background-color: gray;
+        shader-doodle{
+            position: absolute; width:100%; height: 100%;
+            transform: scale(1);
+        }
+    }
+    .big-logo {
+        position: absolute; width: 520px; margin: auto;
+        left:0; right:0; top: 25vh;
+        img { max-width: 100%;}
+    }
+}
+.info-wrap {
+    position: relative; width:100%; max-width: 1920px; margin: 0 auto; 
+    height: 280px; background-color: #000; text-align: center;
+}
+.cards-wrap {
+    position: relative; width:100%; max-width: 1920px; margin: 0 auto;
+    margin: 6rem auto 4rem auto; text-align: center;
+}
+.event-wrap {
+    position: relative; width: 100%; height: 720px;
+    background-color: #000; margin-top: 8rem;
+    display: flex; align-items: center; justify-content: center;
+    img { max-width: 1620px; }
+}
